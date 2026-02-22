@@ -1,0 +1,756 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color:#0f172a;
+    color: rgb(247, 238, 238);
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo styling */
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Nav links container */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Nav link styling */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+    color: #7a93a0;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #0f172a;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        gap: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full screen height */
+    background: url("/images/seat.png") no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content container */
+.hero-content {
+    position: relative;
+    color: white;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Heading */
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Button container */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Base button style */
+.btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Primary button */
+.primary-btn {
+    background-color: #38bdf8;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0284c7;
+}
+
+/* Secondary button */
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+}
+/* Footer */
+.footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #38bdf8;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #334155;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+/*---------------facility section------------------*/
+/* Facility Section */
+.facility {
+    padding: 80px 8%;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.facility-container h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+/* Facility List */
+.facility-list {
+    list-style: none;
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+}
+
+.facility-list li {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    color: #334155;
+}
+
+/* Custom bullet icon */
+.facility-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .facility-container h2 {
+        font-size: 26px;
+    }
+
+    .facility-list li {
+        font-size: 16px;
+    }
+}
+/*---------------detail------------------*/
+/* Customer Form Section */
+.customer-form {
+    padding: 80px 8%;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* Inputs & Textarea */
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0284c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px;
+    }
+}
+/*---------------seat-number------------------*/
+
+/* Seat Section */
+/* Seat Section */
+.seat-number h1{
+    text-align: center;
+    margin-top: 40px;
+    color: #0f172a;
+}
+.form1 .seat-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+    max-width: 300px;
+    margin: 40px auto; /* center the grid */
+}
+
+.seat-btn {
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #e2e8f0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+
+}
+.seat-btn.selected{
+    background-color: #38bdf8;
+    color: white;
+}
+
+/* Hover effect */
+.seat-btn:hover {
+    background-color: #38bdf8;
+    color: white;
+}
+
+.form2 .indicator{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+ .indicator-btn{
+     width: 200px;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.reserved {
+    background-color:rgb(127, 241, 127);
+    color: white;
+}
+
+.available {
+    background-color:#e2e8f0;
+    color: #334155;
+}
+
+.selected {
+    background-color: #38bdf8;
+    color: white;
+}
+/*------ ------------------seat-plan------------------ -- */
+/*------ ------------------next------------------ -- */
+.container {
+    display: flex;
+    justify-content: flex-end; /* moves to left */
+    margin-bottom: 20px;
+}
+.next-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+/*------ ------------------seat-plan------------------ -- */
+/* Section */
+
+.plan-section {
+
+    padding: 80px 20px;
+    background-color:black;
+    text-align: center;
+    color: white;
+
+}
+
+/* Heading */
+
+.plan-heading {
+
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+
+}
+
+.plan-subheading {
+
+    color: #94a3b8;
+    margin-bottom: 50px;
+
+}
+
+
+/* Container */
+
+.plan-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+   
+
+}
+
+
+/* Card */
+
+.plan-card {
+
+    background-color: #1e293b;
+    padding: 40px 30px;
+    width: 260px;
+    height: 400px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+
+}
+.plan-card li{
+    padding:10px;
+
+}
+.plan-card p{
+    font-size: larger;
+}
+
+.plan-card:hover {
+
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+
+}
+
+
+/* Popular Plan Highlight */
+
+.plan-card.selected {
+    background-color:lightgreen;
+    color:black;
+    
+}
+
+
+/* Text */
+
+.plan-duration {
+
+    font-size: 22px;
+    margin-bottom: 15px;
+
+}
+
+
+.plan-price {
+
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+
+.plan-desc {
+
+    color: #cbd5e1;
+
+}
+
+.continue-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+.continue-btn:hover {
+    background-color: #38bdf8;
+    color: white;
+}
+/* Responsive */
+
+@media(max-width:768px){
+
+.plan-container{
+
+flex-direction: column;
+align-items: center;
+
+}
+
+}
+/*------ ------------------payment getway------------------ -- */
+/* Full page background */
+
+.payment-page {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* Main card */
+
+.payment-card {
+
+    background: white;
+
+    padding: 40px;
+
+    width: 380px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    text-align: center;
+
+}
+
+
+/* Plan title */
+
+.plan-title {
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+}
+
+
+/* Amount */
+
+.plan-amount {
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+
+    color: #22c55e;
+
+}
+
+
+/* Pay button */
+
+.pay-btn {
+
+    display: block;
+
+    background: #0f9d58;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.pay-btn:hover {
+
+    background: #0c7c46;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Divider */
+
+.divider {
+
+    margin: 20px 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+/* Input */
+
+.txn-input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+.txn-input:focus {
+
+    border-color: #38bdf8;
+
+}
+
+
+/* Submit button */
+
+.submit-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: #38bdf8;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #0284c7;
+
+}

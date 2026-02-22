@@ -1,0 +1,65 @@
+<%- include("partial/header.ejs") %>
+<section class="plan-section">
+
+<h1 class="plan-heading">Choose the Perfect Plan</h1>
+
+<form action="/select-plan" method="POST">
+    <div class="plan-container">
+
+        <div class="plan-card" data-plan="1month" data-price="899">
+            <h2>1 Month</h2>
+            <p>₹899</p>
+            <li>Ideal for short-term goals</li>
+            <li>exam preparation, </li>
+            <li>trying our study environment.</li>
+        </div>
+
+        <div class="plan-card popular" data-plan="3month" data-price="699">
+            <h2>3 Months</h2>
+            <p>₹699</p>
+            <li><i class="fas fa-star"></i> Most popular plan for consistent focus</li>
+            <li>Discipline building</li>
+            <li>long-term productivity.</li>
+        </div>
+
+        <div class="plan-card" data-plan="12month" data-price="599">
+            <h2>12 Months</h2>
+            <p>₹599</p>
+            <li>Designed for serious aspirants preparing for competitive exams</li>
+            <li>Maximum savings </li>
+            <li>Best value for dedicated students committed</li>
+        </div>
+
+    </div>
+
+    <!-- Hidden input -->
+    <input type="hidden" name="plan" id="selectedPlan">
+ 
+    <button type="submit" class="continue-btn">
+        Continue →
+    </button>
+</form>
+
+</section>
+<script>
+
+const plans = document.querySelectorAll(".plan-card");
+
+const selectedPlanInput = document.getElementById("selectedPlan");
+
+plans.forEach(plan => {
+
+    plan.addEventListener("click", function(){
+
+        plans.forEach(p => p.classList.remove("selected"));
+
+        this.classList.add("selected");
+
+        selectedPlanInput.value = this.dataset.plan;
+
+        console.log("Selected:", this.dataset.plan);
+
+    });
+
+});
+</script>

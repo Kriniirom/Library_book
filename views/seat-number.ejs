@@ -1,0 +1,84 @@
+<%- include("partial/header.ejs") %>
+
+<section class="seat-number" id="seat-number-section">
+
+<form method="POST" action="/seat-book" class="main-form">
+
+    <h1>Book Your Seat</h1>
+
+    <!-- Seat Grid -->
+    <div class="form1">
+
+        <div class="seat-form">
+
+            <!-- Hidden input to send selected seat -->
+            <input type="hidden" name="seatNumber" id="seatNumber">
+
+            <input class="seat-btn" value="1" type="button">
+            <input class="seat-btn" value="10" type="button">
+            <input class="seat-btn" value="2" type="button">
+            <input class="seat-btn" value="11" type="button">
+            <input class="seat-btn" value="3" type="button">
+            <input class="seat-btn" value="12" type="button">
+            <input class="seat-btn" value="4" type="button">
+            <input class="seat-btn" value="13" type="button">
+            <input class="seat-btn" value="5" type="button">
+            <input class="seat-btn" value="14" type="button">
+            <input class="seat-btn" value="6" type="button">
+            <input class="seat-btn" value="15" type="button">
+            <input class="seat-btn" value="7" type="button">
+            <input class="seat-btn" value="16" type="button">
+            <input class="seat-btn" value="8" type="button">
+            <input class="seat-btn" value="17" type="button">
+            <input class="seat-btn" value="9" type="button">
+            <input class="seat-btn" value="18" type="button">
+
+        </div>
+
+    </div>
+
+
+    <!-- Indicator -->
+    <div class="form2">
+
+        <div class="indicator">
+
+            <input class="indicator-btn reserved" value="Reserved" type="button">
+
+            <input class="indicator-btn available" value="Available" type="button">
+
+            <input class="indicator-btn selected" value="Selected" type="button">
+
+        </div>
+
+    </div>
+
+
+    <!-- Next Button -->
+    <div class="container">
+
+        <button class="next-btn" type="submit">
+            Next →
+        </button>
+
+    </div>
+
+
+</form>
+
+</section>
+<script> 
+    const seats= document.querySelectorAll('.seat-btn');
+    const seatNumberInput = document.getElementById('seatNumber');
+
+    seats.forEach(seat => {
+
+    seat.addEventListener("click", function() {
+        seats.forEach(s => s.classList.remove("selected"));
+
+        this.classList.toggle("selected");
+        seatNumberInput.value = this.value;
+    });
+});
+</script>
+<%- include("partial/footer.ejs") %>

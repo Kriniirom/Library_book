@@ -1,0 +1,26 @@
+<%- include("partial/header.ejs") %>
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Your Perfect Study Space</h1>
+
+        <div class="hero-buttons">
+            <a href="/detail" class="btn primary-btn">Book Now</a>
+            <a href="tel:+919863429955" class="btn secondary-btn">Contact</a>
+            <!-- <a href="https://wa.me/919863429955" target="_blank">WhatsApp</a> -->
+        </div>
+    </div>
+
+</section>
+<script src="script.js">
+        // Select hamburger and nav links
+     const hamburger = document.getElementById("hamburger");
+     const navLinks = document.getElementById("navLinks");
+
+    // Toggle menu on click
+    hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+   });
+    </script>
+<%- include("partial/footer.ejs") %>

@@ -1,0 +1,38 @@
+<%- include("partial/header.ejs") %>
+<div class="payment-page">
+
+    <div class="payment-card">
+
+        <h1 class="plan-title"><%= planName %></h1>
+
+        <h2 class="plan-amount">Amount: ₹<%= amount %></h2>
+
+        <a href="<%= upiLink %>" class="pay-btn">
+
+            Pay Now via UPI →
+
+        </a>
+
+        <div class="divider">OR</div>
+
+        <form action="/verify-payment" method="POST">
+
+            <input
+                type="text"
+                name="transactionId"
+                placeholder="Enter UPI Transaction ID"
+                class="txn-input"
+                required
+            >
+
+            <button type="submit" class="submit-btn">
+
+                Verify Payment
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

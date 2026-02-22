@@ -1,0 +1,42 @@
+<%- include("partial/header.ejs") %>
+<!-- Customer Details Form -->
+<section class="customer-form" id="customer">
+
+    <div class="form-container">
+        <h2> Details</h2>
+
+        <form action="/submit-details" method="POST">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Current Address -->
+            <div class="form-group">
+                <label for="currentAddress">Current Address</label>
+                <textarea id="currentAddress" name="current_address" rows="3" placeholder="Enter your current address" required></textarea>
+            </div>
+
+            <!-- Permanent Address -->
+            <div class="form-group">
+                <label for="permanentAddress">Permanent Address</label>
+                <textarea id="permanentAddress" name="perminent_address" rows="3" placeholder="Enter your permanent address" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Details</button>
+
+        </form>
+    </div>
+
+</section>
+
+<%- include("partial/footer.ejs") %>
