@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const db = new pg.Client({
     user: 'postgres',
-    host: 'localhost',
+    host: '127.0.0.1',
     database: 'library',
     password: 'irom@9863429955',
     port: 5432,
